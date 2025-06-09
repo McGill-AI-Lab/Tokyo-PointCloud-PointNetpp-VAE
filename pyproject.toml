@@ -1,0 +1,36 @@
+[project]
+name = "tokyo-pointcloud-pointnetpp-vae"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Davigbit", email = "davigavabittencourt@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy (>=2.3.0,<3.0.0)",
+    "matplotlib (>=3.10.3,<4.0.0)",
+    "trimesh (>=4.6.11,<5.0.0)",
+    "open3d (>=0.19.0,<0.20.0)",
+    "scipy (>=1.15.3,<2.0.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "pytorch-triton (>=3.3.1,<4.0.0)",
+    "torch (>=2.8.0.dev20250608,<3.0.0)",
+]
+
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/nightly/cu128"
+priority = "explicit"
+
+
+[tool.poetry.dependencies]
+pytorch-triton = {source = "pytorch"}
+torch = {source = "pytorch"}
